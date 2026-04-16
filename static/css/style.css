@@ -1,56 +1,70 @@
-/* ===== 全体背景（空グラデ） ===== */
 body {
-    background: linear-gradient(to bottom, #87ceeb, #e0f7ff);
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(180deg, #e0f7ff, #ffffff);
+    font-family: "Helvetica Neue", sans-serif;
 }
 
-/* ===== ナビバー ===== */
+/* ナビ */
 .navbar {
-    background: rgba(0, 123, 255, 0.85) !important;
-    backdrop-filter: blur(6px);
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
 }
 
-/* ===== タイトル ===== */
+/* タイトル */
 h1 {
-    color: #0d3b66;
     font-weight: bold;
+    color: #023e8a;
+    letter-spacing: 2px;
 }
 
-/* ===== カード ===== */
+/* カード */
 .card {
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
     transition: 0.3s;
 }
 
-/* ホバーで浮く */
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* 画像 */
-.card img {
+.card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-/* ===== ボタン（みかんカラー） ===== */
+/* ボタン */
 .btn-primary {
-    background-color: #ff7f11;
+    background: #ff7b00;
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #e66a00;
+    background: #ff9500;
 }
 
-/* ===== 公式リンク ===== */
-a {
-    color: #0077b6;
+body {
+    background: linear-gradient(135deg, #74c0fc, #a5d8ff, #e7f5ff);
+    font-family: "Helvetica Neue", sans-serif;
+    min-height: 100vh;
+}
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
 }
 
-a:hover {
-    color: #023e8a;
+body {
+    background: linear-gradient(135deg, #74c0fc, #a5d8ff, #e7f5ff) !important;
+    min-height: 100vh;
+}
+
+.container {
+    background: transparent !important;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(6px);
+    border: none;
 }

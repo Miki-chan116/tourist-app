@@ -7,7 +7,7 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- 自分のCSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -15,12 +15,14 @@
 <body>
 
 <!-- ナビバー -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="/">観光サイト</a>
+        <a class="navbar-brand fw-bold" href="/">🌊 愛媛トラベル</a>
+
         <div class="ms-auto">
-            <!-- 🔥 ボタンを大きく -->
-            <a href="/add" class="btn btn-primary btn-lg">＋登録する</a>
+            <a href="/add" class="btn btn-primary btn-lg shadow-sm">
+                ＋登録する
+            </a>
         </div>
     </div>
 </nav>
@@ -28,44 +30,49 @@
 <!-- メイン -->
 <div class="container mt-4">
 
-    <!-- 🔥 タイトル変更 -->
-    <h1 class="mb-4 text-center">🌊 愛媛の観光地</h1>
+    <!-- ヒーロー風タイトル -->
+    <div class="text-center mb-5">
+        <h1 class="mb-2"> 愛媛の観光地</h1>
+        <p class="text-muted">
+            愛媛の“まだ知られてない絶景”を集めました
+        </p>
+    </div>
 
+    <!-- カード一覧 -->
     <div class="row">
 
         <!-- カード① -->
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow">
-                <img src="https://placehold.jp/300x200.png" class="card-img-top">
+            <div class="card mb-4 shadow-sm">
+                <img src="https://placehold.jp/600x400.png" class="card-img-top" alt="道後温泉">
                 <div class="card-body">
-                    <h5 class="card-title">道後温泉</h5>
-                    <p class="card-text">歴史ある温泉地</p>
-                    <!-- 🔥 住所追加 -->
-                    <p class="card-text text-muted">愛媛県松山市道後湯之町</p>
+                    <h5 class="card-title">♨️ 道後温泉</h5>
+                    <p class="card-text">歴史ある日本最古級の温泉地。散策も楽しい観光スポット。</p>
+                    <p class="text-muted mb-1">📍 愛媛県松山市道後湯之町</p>
                 </div>
             </div>
         </div>
 
         <!-- カード② -->
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow">
-                <img src="https://placehold.jp/300x200.png" class="card-img-top">
+            <div class="card mb-4 shadow-sm">
+                <img src="https://placehold.jp/600x400.png" class="card-img-top" alt="松山城">
                 <div class="card-body">
-                    <h5 class="card-title">松山城</h5>
-                    <p class="card-text">景色が最高のお城</p>
-                    <p class="card-text text-muted">愛媛県松山市丸之内</p>
+                    <h5 class="card-title">🏯 松山城</h5>
+                    <p class="card-text">市街を見下ろす絶景の城。ロープウェイも楽しめる。</p>
+                    <p class="text-muted mb-1">📍 愛媛県松山市丸之内</p>
                 </div>
             </div>
         </div>
 
         <!-- カード③ -->
         <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow">
-                <img src="https://placehold.jp/300x200.png" class="card-img-top">
+            <div class="card mb-4 shadow-sm">
+                <img src="https://placehold.jp/600x400.png" class="card-img-top" alt="しまなみ海道">
                 <div class="card-body">
-                    <h5 class="card-title">しまなみ海道</h5>
-                    <p class="card-text">サイクリングに最高のルート</p>
-                    <p class="card-text text-muted">愛媛県今治市</p>
+                    <h5 class="card-title">🚲 しまなみ海道</h5>
+                    <p class="card-text">海と島をつなぐサイクリングの聖地。風が気持ちいい。</p>
+                    <p class="text-muted mb-1">📍 愛媛県今治市</p>
                 </div>
             </div>
         </div>
