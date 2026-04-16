@@ -7,6 +7,9 @@
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- 自分のCSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
@@ -16,7 +19,8 @@
     <div class="container">
         <a class="navbar-brand" href="/">観光サイト</a>
         <div class="ms-auto">
-            <a href="/add" class="btn btn-primary">＋登録する</a>
+            <!-- 🔥 ボタンを大きく -->
+            <a href="/add" class="btn btn-primary btn-lg">＋登録する</a>
         </div>
     </div>
 </nav>
@@ -24,7 +28,8 @@
 <!-- メイン -->
 <div class="container mt-4">
 
-    <h1 class="mb-4 text-center">観光地一覧</h1>
+    <!-- 🔥 タイトル変更 -->
+    <h1 class="mb-4 text-center">🌊 愛媛の観光地</h1>
 
     <div class="row">
 
@@ -35,6 +40,8 @@
                 <div class="card-body">
                     <h5 class="card-title">道後温泉</h5>
                     <p class="card-text">歴史ある温泉地</p>
+                    <!-- 🔥 住所追加 -->
+                    <p class="card-text text-muted">愛媛県松山市道後湯之町</p>
                 </div>
             </div>
         </div>
@@ -46,6 +53,7 @@
                 <div class="card-body">
                     <h5 class="card-title">松山城</h5>
                     <p class="card-text">景色が最高のお城</p>
+                    <p class="card-text text-muted">愛媛県松山市丸之内</p>
                 </div>
             </div>
         </div>
@@ -57,6 +65,7 @@
                 <div class="card-body">
                     <h5 class="card-title">しまなみ海道</h5>
                     <p class="card-text">サイクリングに最高のルート</p>
+                    <p class="card-text text-muted">愛媛県今治市</p>
                 </div>
             </div>
         </div>

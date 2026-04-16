@@ -1,0 +1,56 @@
+/* ===== 全体背景（空グラデ） ===== */
+body {
+    background: linear-gradient(to bottom, #87ceeb, #e0f7ff);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== ナビバー ===== */
+.navbar {
+    background: rgba(0, 123, 255, 0.85) !important;
+    backdrop-filter: blur(6px);
+}
+
+/* ===== タイトル ===== */
+h1 {
+    color: #0d3b66;
+    font-weight: bold;
+}
+
+/* ===== カード ===== */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* ホバーで浮く */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* 画像 */
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ===== ボタン（みかんカラー） ===== */
+.btn-primary {
+    background-color: #ff7f11;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e66a00;
+}
+
+/* ===== 公式リンク ===== */
+a {
+    color: #0077b6;
+}
+
+a:hover {
+    color: #023e8a;
+}
