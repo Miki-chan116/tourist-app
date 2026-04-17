@@ -5,34 +5,26 @@
     <title>観光地登録</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-<!-- ナビ -->
 <nav class="navbar navbar-dark">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="/"> 愛媛トラベル</a>
+        <a class="navbar-brand fw-bold" href="/">愛媛トラベル</a>
     </div>
 </nav>
 
-<!-- フォーム -->
 <div class="container mt-5">
-
     <div class="row justify-content-center">
         <div class="col-md-8">
 
             <div class="card shadow-lg border-0 p-4">
-
                 <h2 class="text-center mb-4">🍊 観光地を登録</h2>
 
                 <form method="POST" action="/add">
-
                     <div class="mb-3">
                         <label class="form-label">観光地名</label>
                         <input type="text" name="name" class="form-control" placeholder="例：道後温泉" required>
@@ -40,12 +32,12 @@
 
                     <div class="mb-3">
                         <label class="form-label">説明</label>
-                        <textarea name="description" class="form-control" rows="3" placeholder="魅力を書こう✨"></textarea>
+                        <textarea name="description" class="form-control" rows="3" placeholder="魅力を書こう✨" required></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">住所</label>
-                        <input type="text" name="address" class="form-control" placeholder="愛媛県〇〇市">
+                        <input type="text" name="address" class="form-control" placeholder="愛媛県〇〇市" required>
                     </div>
 
                     <div class="mb-3">
@@ -58,17 +50,19 @@
                         <input type="url" name="official_url" class="form-control" placeholder="https://">
                     </div>
 
+                    <div class="mb-3">
+                        <label class="form-label">画像URL</label>
+                        <input type="url" name="image_url" class="form-control" placeholder="https://example.com/photo.jpg">
+                    </div>
+
                     <button type="submit" class="btn btn-primary btn-lg w-100 mt-3">
-                         登録する
+                        登録する
                     </button>
-
                 </form>
-
             </div>
 
         </div>
     </div>
-
 </div>
 
 </body>
