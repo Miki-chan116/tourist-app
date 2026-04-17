@@ -10,6 +10,36 @@
 
     <!-- 自分のCSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* カード高さ統一 */
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .card-body {
+            flex-grow: 1;
+        }
+
+        /* 2行制限 */
+        .card-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            min-height: 3em;
+        }
+
+        /* ホバー */
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+    </style>
 </head>
 
 <body>
@@ -30,7 +60,6 @@
 <!-- メイン -->
 <div class="container mt-4">
 
-    <!-- ヒーロー風タイトル -->
     <div class="text-center mb-5">
         <h1 class="mb-2"> 愛媛の観光地</h1>
         <p class="text-muted">
@@ -38,40 +67,51 @@
         </p>
     </div>
 
-    <!-- カード一覧 -->
     <div class="row">
 
         <!-- カード① -->
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="https://placehold.jp/600x400.png" class="card-img-top" alt="道後温泉">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="card mb-4 shadow-sm w-100"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modal1">
+                <img src="https://placehold.jp/600x400.png" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">♨️ 道後温泉</h5>
-                    <p class="card-text">歴史ある日本最古級の温泉地。散策も楽しい観光スポット。</p>
-                    <p class="text-muted mb-1">📍 愛媛県松山市道後湯之町</p>
+                    <p class="card-text">
+                        歴史ある日本最古級の温泉地。散策も楽しい観光スポット。レトロな街並みや足湯も人気です。
+                    </p>
+                    <p class="text-muted mb-1">📍 愛媛県松山市</p>
                 </div>
             </div>
         </div>
 
         <!-- カード② -->
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="https://placehold.jp/600x400.png" class="card-img-top" alt="松山城">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="card mb-4 shadow-sm w-100"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modal2">
+                <img src="https://placehold.jp/600x400.png" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">🏯 松山城</h5>
-                    <p class="card-text">市街を見下ろす絶景の城。ロープウェイも楽しめる。</p>
-                    <p class="text-muted mb-1">📍 愛媛県松山市丸之内</p>
+                    <p class="card-text">
+                        市街を見下ろす絶景の城。ロープウェイも楽しめる人気スポットです。
+                    </p>
+                    <p class="text-muted mb-1">📍 愛媛県松山市</p>
                 </div>
             </div>
         </div>
 
         <!-- カード③ -->
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="card mb-4 shadow-sm">
-                <img src="https://placehold.jp/600x400.png" class="card-img-top" alt="しまなみ海道">
+        <div class="col-12 col-md-6 col-lg-4 d-flex">
+            <div class="card mb-4 shadow-sm w-100"
+                 data-bs-toggle="modal"
+                 data-bs-target="#modal3">
+                <img src="https://placehold.jp/600x400.png" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">🚲 しまなみ海道</h5>
-                    <p class="card-text">海と島をつなぐサイクリングの聖地。風が気持ちいい。</p>
+                    <p class="card-text">
+                        海と島をつなぐサイクリングの聖地。風が気持ちよく、絶景が広がります。
+                    </p>
                     <p class="text-muted mb-1">📍 愛媛県今治市</p>
                 </div>
             </div>
@@ -79,6 +119,56 @@
 
     </div>
 </div>
+
+<!-- ===== モーダル ===== -->
+
+<div class="modal fade" id="modal1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>♨️ 道後温泉</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        歴史ある日本最古級の温泉地。散策も楽しい観光スポット。
+        レトロな街並みや足湯もあり、ゆったり過ごせます。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>🏯 松山城</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        市街を見下ろす絶景の城。ロープウェイやリフトも楽しめます。
+        天守からの景色は圧巻です。
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal3">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>🚲 しまなみ海道</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        海と島をつなぐサイクリングの聖地。
+        ドライブや観光にも人気で、絶景を楽しめます。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS（必須） -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
